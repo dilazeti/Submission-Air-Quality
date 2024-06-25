@@ -9,18 +9,14 @@ import numpy as np
 # Judul Halaman
 st.set_page_config(page_title="Data Analysis Air Quality from Gucheng by Fadila")
 
-
 # Load dataset
-data = pd.read_csv("https://raw.githubusercontent.com/herdiflander/Submission-Dicoding-AirQuality/main/dashboard/PRSA_Data_Gucheng_20130301-20170228.csv")
+data = pd.read_csv("https://raw.githubusercontent.com/dilazeti/Submission-Air-Quality/main/data/PRSA_Data_Gucheng_20130301-20170228.csv")
 
 # Judul dashboard
-st.title('Air Quality Analysis Dashboard: Gucheng')
-
-
+st.title('Data Analysis Air Quality from Gucheng')
 
 # Deskripsi
-st.write('Dasboard ini menyediakan cara interaktif untuk menjelajahi data kualitas udara, khususnya berfokus pada tingkat PM10 dan hubungannya dengan berbagai kondisi cuaca.')
-
+st.write('Dashboard ini disediakan agar dapat memberikan fitur interaktif untuk mengeksplorasi data kualitas udara, terutama dalam konteks tingkat PM10 dan korelasinya dengan berbagai kondisi cuaca.')
 
 # About me
 st.markdown("""
@@ -29,6 +25,9 @@ st.markdown("""
 - **Email:** fadilazeti7@gmail.com
 - **ID Dicoding:** fadilazetidewinta    
 """)
+
+#------------------------------------------
+
 
 # Menambahkan sidebar untuk input interaktif
 st.sidebar.header('Fitur Input User')
@@ -80,13 +79,6 @@ try:
     st.pyplot(fig)
 except Exception as e:
     st.error(f"Error dalam memplotkan rata-rata per jam: {e}")
-
-# Membandingkan Curah Hujan dengan Kualitas Udara
-st.subheader('Membandingkan Curah Hujan dengan tingkat PM10')
-fig, ax = plt.subplots()
-sns.scatterplot(x='HUJAN', y='PM10', data=data_filtered, ax=ax)
-plt.title('Perbandingan Curah Hujan dengan tingkat PM10')
-st.pyplot(fig)
 
 # Korelasi Heatmap - Interaktif
 st.subheader('Korelasi Heatmap Interaktif')

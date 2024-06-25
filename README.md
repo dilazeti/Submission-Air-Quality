@@ -17,10 +17,9 @@ streamlit run dashboard.py
 ```
 streamlit run dashboard.py
 ```
-Akses dashboard di browser web Anda pada `http://localhost:8501`.
+
+## Dashboard URL
+Link : https://fadilazeti.streamlit.app/
 
 ## Data Sources
-Dataset yang digunakan dalam proyek ini mencakup pengukuran kualitas udara dari stasiun Gucheng, dengan fokus pada tingkat PM10 dan data lingkungan terkait lainnya
-
-## Live Dashboard
-Link : https://herdiansyah.streamlit.app/
+https://drive.google.com/file/d/1RhU3gJlkteaAQfyn9XOVAz7a5o1-etgr/view?usp=share_link
